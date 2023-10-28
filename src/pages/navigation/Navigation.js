@@ -11,6 +11,9 @@ const Navigation = ({ isAuth, signUserOut }) => {
           <img src={logo} alt="" />
         </Link>
         <div className="nav-links-container">
+          <Link className="nav-link" to="/about">
+            ABOUT
+          </Link>
           {!isAuth ? (
             <Link className="nav-link" to="/login">
               LOGIN
