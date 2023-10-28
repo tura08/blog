@@ -8,7 +8,9 @@ const About = () => {
       <h1>"Gentle Way Practice"</h1>
       <p>
         Pratica giornaliera per gli obiettivi futuri, per una vita ricca e
-        stimolante.
+        stimolante. Condivisione di sfide personali, di pratica di concetti
+        fondamentali per rafforzare il passato e immaginare un futuro sempre più
+        tangibile.
       </p>
     </div>
   );
