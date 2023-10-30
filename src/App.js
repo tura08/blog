@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // components
 import Home from "./pages/home/Home";
+import Blog from "./pages/blog/Blog";
 import About from "./pages/about/About";
 import Login from "./pages/login/Login";
 import CreatePost from "./pages/createPost/CreatePost";
@@ -25,12 +26,13 @@ function App() {
       <Navigation isAuth={isAuth} signUserOut={signUserOut} />
       <Routes>
         <Route path="/" element={<Home isAuth={isAuth} />}></Route>
+        <Route path="/blog" element={<Blog />}></Route>
+        <Route path="/about" element={<About />}></Route>
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />}></Route>
         <Route
           path="/createpost"
           element={<CreatePost isAuth={isAuth} />}
         ></Route>
-        <Route path="/about" element={<About />}></Route>
       </Routes>
     </BrowserRouter>
   );

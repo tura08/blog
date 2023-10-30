@@ -1,9 +1,18 @@
 body {
   margin: 0;
-  padding: 20px 40px;
+  padding: 0;
+  background-color: #e2e2e2;
   font-family: "Poppins", "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: #1e1e1e;
 }
 
 code {
