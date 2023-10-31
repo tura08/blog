@@ -15,19 +15,23 @@ const Navigation = ({ isAuth, signUserOut }) => {
         <Link className="nav-link" to="/blog">
           BLOG
         </Link>
-        <Link className="nav-link" to="/about">
-          ABOUT
-        </Link>
         {!isAuth ? (
-          <Link className="nav-link" to="/login">
-            LOGIN
-          </Link>
+          <>
+            <Link className="nav-link" to="/about">
+              ABOUT
+            </Link>
+            <Link className="nav-link" to="/login">
+              LOGIN
+            </Link>
+          </>
         ) : (
           <>
             <Link className="nav-link" to="/createpost">
               CREATE POST
             </Link>
-            <button onClick={signUserOut}>LOGOUT</button>
+            <button className="nav-logout" onClick={signUserOut}>
+              LOGOUT
+            </button>
           </>
         )}
       </div>

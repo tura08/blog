@@ -26,15 +26,15 @@ const CreatePost = ({ isAuth }) => {
     if (!isAuth) {
       navigate("/login");
     }
-  }, []);
+  }, [isAuth, navigate]);
 
   return (
-    <div className="createPostPage">
-      <div className="cpContainer">
+    <div className="c-post">
+      <div className="c-postContainer">
         <h1>Create a post</h1>
-        <div className="inputGp">
-          <label>Title:</label>
+        <div className="c-postGroup">
           <input
+            className="c-postTitle"
             placeholder="Title..."
             onChange={(e) => {
               setTitle(e.target.value);
@@ -42,9 +42,9 @@ const CreatePost = ({ isAuth }) => {
             value={title}
           />
         </div>
-        <div className="inputGp">
-          <label>Post:</label>
+        <div className="c-postGroup">
           <textarea
+            className="c-postTextarea"
             placeholder="Write a post..."
             onChange={(e) => {
               setPostText(e.target.value);
@@ -52,7 +52,9 @@ const CreatePost = ({ isAuth }) => {
             value={postText}
           />
         </div>
-        <button onClick={createPost}>Publish</button>
+        <button className="c-postPublish" onClick={createPost}>
+          Publish
+        </button>
       </div>
     </div>
   );

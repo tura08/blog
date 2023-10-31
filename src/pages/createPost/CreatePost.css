@@ -1,11 +1,12 @@
-.createPostPage {
+.c-post {
   width: 100%;
-  height: calc(100vh - 80px);
+  /* height: calc(100vh - 80px); */
   display: grid;
   place-items: center;
 }
 
-.cpContainer {
+.c-postContainer {
+  position: relative;
   width: 80%;
   height: auto;
   padding: 20px;
@@ -14,49 +15,49 @@
   flex-direction: column;
 }
 
-.cpContainer .inputGp {
+.c-postGroup {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
-
-.inputGp input,
-.inputGp textarea {
+.c-postTitle,
+.c-postTextarea {
   font-family: Poppins;
   font-size: 18px;
   border: none;
   border-radius: 2px;
-  padding: 5px;
+  padding: 15px 0;
+  background-color: #e2e2e2;
 }
 
-.inputGp input {
-  height: 40px;
+.c-postTitle {
+  font-size: 25px;
 }
-.inputGp textarea {
-  height: 150px;
+.c-postTextarea {
+  font-size: 20px;
+  height: 100vh;
 }
-
-.cpContainer button {
-  color: black;
+.c-postPublish {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  color: #e2e2e2;
+  background-color: #004d93;
+  padding: 10px;
   border: none;
-  padding: 10px 10px;
-  border-radius: 20px;
-  font-size: 15px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
-  background-color: #006400; /* Dark green */
-  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
 }
 
-.cpContainer button:hover {
-  background-color: #459a45; /* Light green on hover */
+.c-postContainer button:hover {
+  color: #004d93;
+  background-color: white;
+  border: solid 1px #004d93;
 }
 
-.cpContainer input:focus,
-.cpContainer textarea:focus {
-  outline: none; /* Remove the default blue highlight */
-}
-input,
-textarea {
-  margin-top: 5px;
+.c-postTitle:focus,
+.c-postTextarea:focus {
+  outline: none;
 }
