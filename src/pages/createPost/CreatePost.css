@@ -15,13 +15,8 @@
   flex-direction: column;
 }
 
-.c-postGroup {
+.c-postTitle {
   margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-}
-.c-postTitle,
-.c-postTextarea {
   font-family: Poppins;
   font-size: 18px;
   border: none;
@@ -33,9 +28,13 @@
 .c-postTitle {
   font-size: 25px;
 }
-.c-postTextarea {
-  font-size: 20px;
-  height: 100vh;
+.c-postEditor {
+  height: 300px;
+  /* overflow: scroll; */
+}
+.c-editor {
+  height: 100%;
+  border: none;
 }
 .c-postPublish {
   position: absolute;
@@ -57,7 +56,6 @@
   border: solid 1px #004d93;
 }
 
-.c-postTitle:focus,
-.c-postTextarea:focus {
+.c-postTitle:focus {
   outline: none;
 }

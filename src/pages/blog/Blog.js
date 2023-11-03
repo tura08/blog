@@ -45,7 +45,8 @@ const Blog = ({ isAuth }) => {
                   )}
                 </div>
               </div>
-              <div className="postTextContainer"> {post.postText} </div>
+              {/* <div className="postTextContainer">  </div> */}
+              {post.postText}
               <h4>@{post.author.name}</h4>
             </div>
           );
